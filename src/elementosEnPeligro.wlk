@@ -1,7 +1,7 @@
 class Hogar {
-	var saludEsBuena = nivelDeMugre == confortQueOfrce / 2
 	var nivelDeMugre = 5
 	var confortQueOfrce = 10
+	method saludEsBuena() = nivelDeMugre == confortQueOfrce / 2
 }
 
 class TodasLasHuertas{
@@ -9,11 +9,22 @@ class TodasLasHuertas{
 }
 
 class Huerta inherits TodasLasHuertas{
-	var saludEsBuena = produccionPorMes > produccionASuperar
 	var produccionPorMes = 2
+	method saludEsBuena() = produccionPorMes > produccionASuperar
 }
 
 class Mascota{
-	var saludEsBuena = nivelDeSalud <= 250
 	var nivelDeSalud = 250
+	method saludEsBuena() = nivelDeSalud <= 250
+}
+
+class Barrio{
+	const elementos = []
+	const esCopado = elementos.count{e => e.saludEsBuena()}
+	method agregarElemento(nuevoElemento){
+		elementos.add(nuevoElemento)
+	}
+	//method elementoEsSaludable(elemento){
+		//elementos.elemento
+	//}
 }
